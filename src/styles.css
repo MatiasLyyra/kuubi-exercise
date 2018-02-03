@@ -2,9 +2,34 @@
   font-family: 'Open Sans' !important;
 }
 
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+
 .form-container {
   width: 60%;
   padding-top: 50px;
+  position: relative;
+}
+
+.form-submit-button {
+  background-color: white;
+  color: #30ADB4;
+  border: 1px solid;
+}
+
+.form-submit-button:hover {
+  background-color: rgba(48,173,180,0.1);
+}
+
+.form-submit-button:active {
+  background-color: rgba(48,173,180,0.5);
+  color: whitesmoke;
+  border: 1px solid #26898E;
 }
 
 .title {
@@ -21,12 +46,40 @@
   white-space: nowrap;
 }
 
-.form-title {
+.bold-text {
   font-weight: bold;
-  margin-left: 10px;
 }
 
 .small-gray-text {
-  font-size: 0.6em;
-  color: lightgray;
+  font-size: 0.85em;
+  color: gray;
+}
+
+.base-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+
+.background-top {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-right: 60vw solid transparent;
+  border-top: 40vw solid #FBF7F2;
+}
+
+.background-bottom {
+  right: 0;
+  bottom: 0;
+  border-left: 70vw solid transparent;
+  border-bottom: 32vw solid #FFD2DE;
 }

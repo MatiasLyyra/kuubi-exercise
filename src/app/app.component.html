@@ -1,3 +1,12 @@
+<div class="base-container">
+  <div class="background background-top">
+  
+  </div>
+  <div class="background background-bottom">
+      
+  </div>
+
+
 <div class="container form-container">
   <h1 class="title">
     <span class="no-wrap">
@@ -8,26 +17,66 @@
     </span>
   </h1>
   <div class="row">
-    <div class="col l6">
-       <form>
+    <div class="col l6 s12">
+       <div class="col s12">
         <div class="row">
-          <div class="col s12">
-            <span class="form-title">Create profile</span>
+          <div class="input-field col s12">
+            <span class="bold-text">Create profile</span>
+            <span class="right small-gray-text">* required</span>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-            <label for="first_name">First Name</label>
+            <input id="name" type="text" class="validate">
+            <label for="name" class="bold-text">Name *</label>
           </div>
         </div>
-       </form>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="text" class="validate">
+            <label for="email" class="bold-text">Email *</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="phone" type="text" class="validate">
+            <label for="phone" class="bold-text">Phone *</label>
+          </div>
+        </div>
+       </div>
     </div>
     <div class="col l6">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus commodo lacus ac pretium. Suspendisse potenti. Vestibulum sed metus ante. Sed non erat vel ipsum vestibulum ullamcorper. Sed aliquam bibendum ligula. Aenean gravida sem at enim interdum fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris hendrerit sem sit amet ex viverra pharetra. Vivamus ornare ipsum ut interdum semper.
-
-      Nullam fringilla lorem nunc. Aenean sit amet porttitor nibh. Praesent vitae mauris id sem hendrerit placerat. Morbi consequat augue in velit venenatis, ut sollicitudin dolor varius. Mauris ultricies ullamcorper odio. Ut laoreet, ligula vel elementum porttitor, libero purus ultrices ante, auctor sagittis dolor purus at purus. Quisque eget nisl a dolor pulvinar commodo sit amet ut dui. Suspendisse lacinia nec sem et vestibulum. Proin vehicula felis id ex volutpat, sed laoreet sem feugiat. Nunc iaculis accumsan convallis. Maecenas nec tellus sodales, accumsan magna non, varius metus. Pellentesque enim lectus, cursus ut nunc vitae, sagittis dictum sem. Nunc vulputate nunc sit amet tortor vulputate tincidunt. Etiam velit urna, pretium eu hendrerit ac, eleifend non lacus. Sed gravida aliquam aliquet. Duis vel nisi ac dolor condimentum fermentum imperdiet ut ante. 
+      <div class="row">
+        <div class="input-field col s12">
+          <span class="bold-text">Choose your avatar</span>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus commodo lacus ac pretium. Suspendisse potenti. Vestibulum sed metus ante. Sed non erat vel ipsum vestibulum ullamcorper. Sed aliquam bibendum ligula. Aenean gravida sem at enim interdum fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris hendrerit sem sit amet ex viverra pharetra. Vivamus ornare ipsum ut interdum semper.</p>
     </div>
   </div>
-  
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="tell_us" class="materialize-textarea"></textarea>
+          <label for="tell_us" class="bold-text">Tell us something about you</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <input type="checkbox" class="filled-in" id="agree"/>
+      <label for="agree">I agree to terms and conditions *</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <div class="btn-large form-submit-button bold-text">
+        Submit
+      </div>        
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: 0;"></div>
+</div>
 </div>
