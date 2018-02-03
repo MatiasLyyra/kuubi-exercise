@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Open Sans' !important;
+}
+
+.form-container {
+  width: 60%;
+  padding-top: 50px;
+}
+
+.title {
+  margin-top: 5%;
+  font-weight: bolder;
+  color: #28283c;
+}
+
+.title-blue {
+  color: #30ADB4;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.form-title {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.small-gray-text {
+  font-size: 0.6em;
+  color: lightgray;
+}
