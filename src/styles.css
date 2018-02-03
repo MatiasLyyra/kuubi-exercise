@@ -20,10 +20,11 @@ body {
   background-color: white;
   color: #30ADB4;
   border: 1px solid;
+  user-select: none;
 }
 
 .form-submit-button:hover {
-  background-color: rgba(48,173,180,0.1);
+  background-color: rgba(48,173,180,0.3);
 }
 
 .form-submit-button:active {
@@ -82,4 +83,23 @@ body {
   bottom: 0;
   border-left: 70vw solid transparent;
   border-bottom: 32vw solid #FFD2DE;
+}
+
+.form-bottom-part {
+  padding-left: 8px;
+}
+
+.form-textarea {
+  background-color: white;
+  width: 90%;
+  border: 2px solid lightgray;
+  resize: none;
+}
+
+.form-textarea:focus {
+  border: 2px solid #30ADB4;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
 }

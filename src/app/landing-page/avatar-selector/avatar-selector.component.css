@@ -1,0 +1,10 @@
+.selected-img {
+  margin-left: 10px;
+  max-width: 120px;
+  max-height: auto;
+}
+
+.avatar-selector {
+  max-width: 70%;
+  min-width: 260px;
+}

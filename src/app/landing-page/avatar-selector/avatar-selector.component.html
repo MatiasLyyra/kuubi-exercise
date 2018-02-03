@@ -1,0 +1,30 @@
+<div class="row">
+  <div col="col s12">
+    <img src="assets/avatars/{{currentSelection}}" class="img-responsive selected-img">
+  </div>
+</div>
+<div class="avatar-selector">
+  
+<div class="row">
+  <div class="col s4">
+    <app-avatar-image (selectEvent)="newSelection($event)" [fileName]="'avatar-01.png'" [selected]="true"></app-avatar-image>
+  </div>
+  <div class="col s4">
+    <app-avatar-image (selectEvent)="newSelection($event)" [fileName]="'avatar-02.png'"></app-avatar-image>
+  </div>
+  <div class="col s4">
+    <app-avatar-image (selectEvent)="newSelection($event)" [fileName]="'avatar-03.png'"></app-avatar-image>
+  </div>
+</div>
+<div class="row">
+  <div class="col s4">
+    <app-avatar-image (selectEvent)="newSelection($event)" [fileName]="'avatar-04.png'"></app-avatar-image>
+  </div>
+  <div class="col s4">
+    <app-avatar-image (selectEvent)="newSelection($event)" [fileName]="'avatar-05.png'"></app-avatar-image>
+  </div>
+  <div class="col s4">
+    <app-avatar-image (selectEvent)="newSelection($event)" [fileName]="'avatar-06.png'"></app-avatar-image>
+  </div>
+</div>
+</div>

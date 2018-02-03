@@ -1,0 +1,11 @@
+.avatar-image {
+  cursor: auto;
+  max-width: 65px;
+  max-height: auto;
+}
+
+.gray {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  cursor: pointer;
+}
