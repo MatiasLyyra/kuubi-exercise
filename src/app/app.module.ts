@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AvatarSelectorComponent } from './landing-page/avatar-selector/avatar-selector.component';
 import { AvatarImageComponent } from './landing-page/avatar-selector/avatar-image.component';
-import { TextareaAutosizeDirective } from './textarea-autosize.directive';
 import { SubmittedComponent } from './submitted/submitted.component';
 import { FormService } from './form.service';
 const routes: Routes = [
@@ -29,7 +28,6 @@ const routes: Routes = [
     LandingPageComponent,
     AvatarSelectorComponent,
     AvatarImageComponent,
-    TextareaAutosizeDirective,
     SubmittedComponent,
   ],
   imports: [
