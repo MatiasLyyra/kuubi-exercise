@@ -1,11 +1,8 @@
 * {
   font-family: 'Open Sans' !important;
 }
-html {
-  min-height: 100%;
-}
 body {
-  height: 100vh;
+  height: auto;
 }
 
 .form-container {
@@ -25,7 +22,7 @@ body {
   background-color: rgba(48,173,180,0.3);
 }
 
-.form-submit-button:active {
+.form-submit-button:focus {
   background-color: rgba(48,173,180,0.5);
   color: whitesmoke;
   border: 1px solid #26898E;
