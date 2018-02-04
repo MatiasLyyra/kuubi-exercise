@@ -30,7 +30,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input class="form-input" id="email" type="text" formControlName="email" type="text" required pattern="^([\w-\.]+@([\w-]+\.)+[\w-]{2,})?$" [class.invalid]="email.dirty && email.touched && email.invalid">
+            <input class="form-input" id="email" type="text" formControlName="email" type="text" required pattern="([-\w.]+@([-\w]+.)+[-\w]{2,})" [class.invalid]="email.dirty && email.touched && email.invalid">
             <label for="email" data-error="Please enter a valid email address" class="bold-text">Email *</label>
           </div>
         </div>
