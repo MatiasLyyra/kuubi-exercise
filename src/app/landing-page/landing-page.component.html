@@ -1,44 +1,48 @@
-<div class="background background-top"></div>
-<div class="background background-bottom"></div>
-<div class="container form-container">
+<div class="container">
+  
+<div class="title-wrapper">
   <h1 class="title">
-  <span class="no-wrap">
-    Kuubi <span class="title-blue">Super</span>
-  </span>
-  <span class="no-wrap">
-    <span class="title-blue">Elite</span> devteam
-  </span>
+    <div>
+      Kuubi <span class="title-blue">Super</span>
+    </div>
+    <div>
+      <span class="title-blue">Elite</span> devteam
+    </div>
   </h1>
+</div>
+<form materialize [formGroup]="form">
   <div class="row no-margin-bottom">
-    <div class="col l6 s12">
+    <div class="col m6 s12">
       <div class="col s12">
         <div class="row">
-          <div class="input-field col s12">
+          <div class="input-field col s6">
             <span class="bold-text">Create profile</span>
+          </div>
+          <div class="input-field col s6">
             <span class="right small-gray-text">* required</span>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="name" type="text" class="validate">
-            <label for="name" class="bold-text">Name *</label>
+            <input class="form-input" required minlength="2" [class.invalid]="name.dirty && name.invalid" id="name" type="text" formControlName="name">
+            <label for="name" data-error="Please enter a name"class="bold-text">Name *</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="email" type="text" class="validate">
-            <label for="email" class="bold-text">Email *</label>
+            <input class="form-input" id="email" type="text" formControlName="email" type="email" required email [class.invalid]="email.dirty && email.touched && email.invalid">
+            <label for="email" data-error="Please enter a valid email address" class="bold-text">Email *</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="phone" type="text" class="validate">
-            <label for="phone" class="bold-text">Phone *</label>
+            <input class="form-input" id="phone" type="text" required pattern="[0-9]{0,10}" [class.invalid]="phone.dirty && phone.touched && phone.invalid" formControlName="phone">
+            <label for="phone" data-error="Please enter valid phone number" class="bold-text">Phone *</label>
           </div>
         </div>
       </div>
     </div>
-    <div class="col l6">
+    <div class="col m6">
       <div class="row no-margin-bottom">
         <div class="input-field col s12">
           <span class="bold-text">Choose your avatar</span>
@@ -53,24 +57,41 @@
         <div class="row">
           <div class="input-field col s12">
             <span class="small-gray-text">Tell us something about you</span>
-            <textarea class="form-textarea" rows="4"></textarea>
+            <textarea class="form-textarea" rows="7" columns="8" formControlName="tellUs"></textarea>
           </div>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col s12">
-        <input type="checkbox" class="filled-in" id="agree"/>
-        <label for="agree">I agree to terms and conditions *</label>
+      <div class="col s12 invalid">
+        <input required="true" type="checkbox" class="filled-in" id="agree" formControlName="agree"/>
+        <label for="agree" class="agree-label">I agree to </label><a class="terms-and-conditions-link" (click)="openTerms()">terms and conditions</a><span class="small-gray-text"> *</span>
+        <div class="form-error-message">
+          <span [hidden]="!(agree.dirty && agree.invalid)">You must agree to terms and conditions</span>
+        </div>
+      </div>
+      
+
+      <!-- Modal Structure -->
+      <div id="terms-and-conditions" class="modal" materialize="modal" [materializeActions]="termsModalAction">
+        <div class="modal-content">
+          <h4>Terms and conditions</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed nulla non lorem fringilla cursus non vitae nisi. Donec luctus arcu nec tellus lacinia ullamcorper. Praesent nec elit a urna sodales luctus id eget urna. Curabitur non sem eu enim gravida tincidunt. Donec vitae sem eget elit feugiat tristique a vitae est. Vivamus nec massa a lorem faucibus mollis. Phasellus molestie diam risus, non fringilla ex elementum non. Phasellus lorem sapien, ultricies sit amet mi et, cursus auctor sapien. Nullam porttitor molestie dolor, ut venenatis purus placerat vitae. Morbi molestie turpis sed augue congue fermentum. Vestibulum sodales tortor nec felis egestas, eget sodales purus vestibulum. Quisque interdum euismod magna, vel posuere magna interdum non. Vestibulum eget massa eget risus auctor tristique.
+          </p>
+          <p>
+          Duis lacus quam, efficitur ut diam ut, elementum imperdiet orci. Quisque non turpis leo. Nulla porta dui non imperdiet dignissim. Curabitur imperdiet tellus lacus, non rhoncus metus porta a. Quisque libero massa, dapibus in dolor vel, eleifend suscipit turpis. Cras maximus auctor diam id suscipit. Quisque sollicitudin in risus nec dapibus. Nullam et neque mauris. Morbi elementum urna tortor, eget convallis erat auctor ut.
+          </p>
+        </div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col s12">
-      <div class="btn-large form-submit-button bold-text">
+      <a class="btn-large form-submit-button bold-text" (click)="submitForm()">
         Submit
-      </div>
+      </a>
     </div>
   </div>
-  <div class="row" style="margin-bottom: 0;"></div>
+</form>
+<div class="row" style="margin-bottom: 0;"></div>
 </div>

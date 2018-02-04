@@ -2,6 +2,10 @@
   cursor: auto;
   max-width: 65px;
   max-height: auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .gray {

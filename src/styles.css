@@ -1,14 +1,12 @@
 * {
   font-family: 'Open Sans' !important;
 }
-
 html {
-  height: 100%;
-}
-body {
   min-height: 100%;
 }
-
+body {
+  height: 100vh;
+}
 
 .form-container {
   width: 60%;
@@ -34,9 +32,13 @@ body {
 }
 
 .title {
-  margin-top: 5%;
   font-weight: bolder;
   color: #28283c;
+}
+
+.title-wrapper {
+  padding: 0 5px;
+  margin-top: 5%;
 }
 
 .title-blue {
@@ -63,7 +65,7 @@ body {
 }
 
 .background {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   width: 0;
   height: 0;
@@ -74,15 +76,15 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  border-right: 60vw solid transparent;
-  border-top: 40vw solid #FBF7F2;
+  border-right: 50vw solid transparent;
+  border-top: 30vw solid #FBF7F2;
 }
 
 .background-bottom {
   right: 0;
   bottom: 0;
-  border-left: 70vw solid transparent;
-  border-bottom: 32vw solid #FFD2DE;
+  border-left: 55vw solid transparent;
+  border-bottom: 30vw solid #FFD2DE;
 }
 
 .form-bottom-part {
@@ -90,10 +92,15 @@ body {
 }
 
 .form-textarea {
+  min-height: 8em;
   background-color: white;
   width: 90%;
   border: 2px solid lightgray;
-  resize: none;
+  resize: vertical;
+  -webkit-transition: border 0.5s ease-in-out;
+  -moz-transition: border 0.5s ease-in-out;
+  -o-transition: border 0.5s ease-in-out;
+  transition: border 0.5s ease-in-out;
 }
 
 .form-textarea:focus {
@@ -102,4 +109,27 @@ body {
 
 .no-margin-bottom {
   margin-bottom: 0;
+}
+
+label {
+  width: 100%;
+}
+
+.form-error-message {
+  height: 1em;
+  color: red;
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.agree-label {
+  display: inline-block;
+  width: auto;
+  white-space: pre;
+}
+
+.terms-and-conditions-link {
+  cursor: pointer;
+  text-decoration: underline;
 }
