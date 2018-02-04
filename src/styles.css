@@ -29,8 +29,18 @@ body {
 }
 
 .title {
-  font-weight: bolder;
+  font-weight: 700;
   color: #28283c;
+}
+
+.scaling-title {
+  font-size: 6em;
+}
+
+@media(max-width: 800px) {
+  .scaling-title {
+    font-size: 10vw;
+  }
 }
 
 .title-wrapper {
@@ -40,10 +50,6 @@ body {
 
 .title-blue {
   color: #30ADB4;
-}
-
-.no-wrap {
-  white-space: nowrap;
 }
 
 .bold-text {
@@ -89,7 +95,7 @@ body {
 }
 
 .form-textarea {
-  min-height: 8em;
+  min-height: 16em;
   background-color: white;
   width: 90%;
   border: 2px solid lightgray;
@@ -121,12 +127,15 @@ label {
 }
 
 .agree-label {
+  font-weight: bold;
+  color: black;
   display: inline-block;
   width: auto;
   white-space: pre;
 }
 
 .terms-and-conditions-link {
+  font-weight: bold;
   cursor: pointer;
   text-decoration: underline;
 }

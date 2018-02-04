@@ -1,7 +1,7 @@
 <div class="container">
   
 <div class="title-wrapper">
-  <h1 class="title">
+  <h1 class="title scaling-title">
     <div>
       Kuubi <span class="title-blue">Super</span>
     </div>
@@ -65,7 +65,7 @@
     <div class="row">
       <div class="col s12 invalid">
         <input required="true" type="checkbox" class="filled-in" id="agree" formControlName="agree"/>
-        <label for="agree" class="agree-label">I agree to </label><a class="terms-and-conditions-link" (click)="openTerms()">terms and conditions</a><span class="small-gray-text"> *</span>
+        <label for="agree" class="agree-label">I agree to </label><a class="terms-and-conditions-link" (click)="openTerms()">terms and conditions</a><span class="agree-label"> *</span>
         <div class="form-error-message">
           <span [hidden]="!(agree.dirty && agree.invalid)">You must agree to terms and conditions</span>
         </div>
