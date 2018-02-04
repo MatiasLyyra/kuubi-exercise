@@ -7,7 +7,7 @@ import { AvatarImageComponent } from './avatar-image.component';
   styleUrls: ['./avatar-selector.component.css']
 })
 export class AvatarSelectorComponent implements OnInit {
-  private currentSelection = 'avatar-01.png';
+  currentSelection = 'avatar-01.png';
 
   @ViewChildren(AvatarImageComponent)
   images: QueryList<AvatarImageComponent>;
@@ -17,7 +17,7 @@ export class AvatarSelectorComponent implements OnInit {
   ngOnInit() {
   }
 
-  private newSelection(fileName: string) {
+  newSelection(fileName: string) {
     this.currentSelection = fileName;
     this.images
     .filter(i => i.fileName !== fileName)

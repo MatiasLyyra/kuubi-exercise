@@ -8,8 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-  private form: FormGroup;
-  private termsModalAction: EventEmitter<string|MaterializeAction>;
+  form: FormGroup;
+  termsModalAction: EventEmitter<string|MaterializeAction>;
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.termsModalAction = new EventEmitter();
@@ -29,7 +29,7 @@ export class LandingPageComponent implements OnInit {
     });
   }
 
-  private submitForm() {
+  submitForm() {
     if (this.form.valid) {
       console.log(this.form.value);
       this.router.navigate(['submitted']);
@@ -44,7 +44,7 @@ export class LandingPageComponent implements OnInit {
     }
   }
 
-  private openTerms() {
+  openTerms() {
     this.termsModalAction.emit({action: 'modal', params: ['open']});
   }
 

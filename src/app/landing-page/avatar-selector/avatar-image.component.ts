@@ -23,14 +23,14 @@ export class AvatarImageComponent implements AfterViewInit {
   ngAfterViewInit() {
   }
 
-  private select() {
+  select() {
     if (!this.selected) {
       this.selected = true;
       this.selectEvent.emit(this.fileName);
     }
   }
 
-  public unselect() {
+  unselect() {
     this.selected = false;
   }
 
