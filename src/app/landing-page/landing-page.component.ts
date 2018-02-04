@@ -1,7 +1,10 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MaterializeAction } from 'angular2-materialize';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormService } from '../form.service';
+import { AvatarSelectorComponent } from './avatar-selector/avatar-selector.component';
+
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
@@ -11,7 +14,14 @@ export class LandingPageComponent implements OnInit {
   form: FormGroup;
   termsModalAction: EventEmitter<string|MaterializeAction>;
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  @ViewChild(AvatarSelectorComponent)
+  avatarSelector: AvatarSelectorComponent;
+
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private formService: FormService,
+  ) {
     this.termsModalAction = new EventEmitter();
   }
 
@@ -31,8 +41,14 @@ export class LandingPageComponent implements OnInit {
 
   submitForm() {
     if (this.form.valid) {
-      console.log(this.form.value);
-      this.router.navigate(['submitted']);
+      const formEntry = Object.assign({}, this.form.value);
+      delete formEntry.agree;
+      formEntry['avatar'] = this.avatarSelector.currentSelection;
+      this.formService.sendForm(formEntry)
+      .subscribe(
+        val => this.router.navigate(['submitted']),
+        error => this.formService.displayNotification('Error occured while submitting the form', 3000, 'red')
+      );
     } else {
       const formControls = this.form.controls;
       for (const key in formControls) {

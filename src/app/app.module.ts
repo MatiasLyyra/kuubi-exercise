@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterializeModule } from 'angular2-materialize';
@@ -10,7 +12,7 @@ import { AvatarSelectorComponent } from './landing-page/avatar-selector/avatar-s
 import { AvatarImageComponent } from './landing-page/avatar-selector/avatar-image.component';
 import { TextareaAutosizeDirective } from './textarea-autosize.directive';
 import { SubmittedComponent } from './submitted/submitted.component';
-
+import { FormService } from './form.service';
 const routes: Routes = [
   {
     path: '',
@@ -35,8 +37,9 @@ const routes: Routes = [
     MaterializeModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
+    HttpModule,
   ],
-  providers: [],
+  providers: [FormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
